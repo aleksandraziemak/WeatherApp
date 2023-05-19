@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.6'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+checkstyleMain {
+    source = fileTree('src/main/java')
+}
