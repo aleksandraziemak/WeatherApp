@@ -1,8 +1,10 @@
 package com.weatherapp.api;
 
+import com.weatherapp.domain.model.TemperatureUnits;
 import com.weatherapp.domain.model.Weather;
+import com.weatherapp.domain.model.WeatherQuery;
 
-public class WeatherMapperDto {
+class WeatherMapper {
 
     public static WeatherDto map(Weather weather) {
         WeatherDto weatherDto = new WeatherDto();
@@ -13,6 +15,10 @@ public class WeatherMapperDto {
         weatherDto.setWindSpeed(weather.getWindSpeed());
         weatherDto.setSky(mapSkyDto(weather));
         return weatherDto;
+    }
+
+    public static WeatherQuery map(WeatherQueryDto queryDto) {
+        return WeatherQuery.of(queryDto.getCity(), TemperatureUnits.valueOf(queryDto.getUnits().name()));
     }
 
     private static LocalisationDto mapLocalisationDto(Weather weather) {

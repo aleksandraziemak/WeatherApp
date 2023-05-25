@@ -8,4 +8,13 @@ import lombok.Setter;
 public class Sky {
     private String sky;
     private String description;
+
+    private Sky(String sky, String description) {
+        this.sky = sky;
+        this.description = description;
+    }
+
+    public static Sky of(String sky, String description) {
+        return new Sky(sky, description);
+    }
 }

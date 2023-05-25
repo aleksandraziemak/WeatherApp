@@ -1,8 +1,5 @@
 package com.weatherapp.api;
 
-import com.weatherapp.domain.model.Localisation;
-import com.weatherapp.domain.model.Sky;
-import com.weatherapp.domain.model.Temperature;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

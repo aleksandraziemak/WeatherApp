@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /weather-app
+
+weather:
+  host: "https://api.mock.api.excited.openweathermap.org"
+  api-key: "testapikeyexcited"
