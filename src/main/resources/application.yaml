@@ -5,5 +5,5 @@ server:
 
 weather:
   host: "https://api.openweathermap.org"
-  today-forecast-path: "/data/2.5/weather?q={cityname}"
-  api-key: "&appid=dc06e8629dca32b7f58f8a5813ffea0b"
+  today-forecast-path: "/data/2.5/weather?q={cityName}&appid={apiKey}&units={units}"
+  api-key: "dc06e8629dca32b7f58f8a5813ffea0b"
